@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════
+   Stats Panel
+   ═══════════════════════════════════════════════════════════ */
+
+.stats-panel {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+}
+
+.stats-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    flex: 1;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 16px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--stat-color);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.stat-item:hover {
+    background: var(--bg-glass-light);
+    border-color: var(--border-glow);
+    transform: translateY(-2px);
+}
+
+.stat-item:hover::before {
+    opacity: 1;
+}
+
+.stat-icon {
+    font-size: 1.3rem;
+}
+
+.stat-content {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--stat-color);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.stat-unit {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+.stats-empty {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

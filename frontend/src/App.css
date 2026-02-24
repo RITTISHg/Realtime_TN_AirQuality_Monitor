@@ -1,0 +1,136 @@
+/* ═══════════════════════════════════════════════════════════
+   App Layout & Grid
+   ═══════════════════════════════════════════════════════════ */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Error Banner ──────────────────────────────────────── */
+.error-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 24px 0;
+    padding: 14px 20px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: #fca5a5;
+    font-size: 0.9rem;
+}
+
+.error-icon {
+    font-size: 1.2rem;
+}
+
+.error-retry {
+    margin-left: auto;
+    padding: 6px 16px;
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-full);
+    color: #fca5a5;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.error-retry:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+/* ── Dashboard Grid ────────────────────────────────────── */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 24px;
+    padding: 24px;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gauge-section {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.stats-section {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.chart-section {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.overview-section {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.stations-section {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.app-footer {
+    margin-top: auto;
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.app-footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.app-footer a {
+    color: var(--accent-indigo);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.app-footer a:hover {
+    color: var(--accent-violet);
+}
+
+.footer-sub {
+    margin-top: 4px;
+    font-size: 0.78rem !important;
+    opacity: 0.6;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .gauge-section,
+    .stats-section,
+    .chart-section,
+    .overview-section,
+    .stations-section {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-grid {
+        padding: 12px;
+        gap: 12px;
+    }
+}

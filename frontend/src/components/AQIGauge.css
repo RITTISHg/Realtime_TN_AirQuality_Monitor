@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════
+   AQI Gauge
+   ═══════════════════════════════════════════════════════════ */
+
+.aqi-gauge {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 340px;
+}
+
+.gauge-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.gauge-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: -0.01em;
+}
+
+.gauge-badge {
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid;
+    letter-spacing: 0.02em;
+}
+
+.gauge-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 260px;
+    margin: 4px 0;
+}
+
+.gauge-svg {
+    width: 100%;
+}
+
+.gauge-arc-value {
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gauge-value-container {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-value {
+    font-family: var(--font-mono);
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.gauge-unit {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.gauge-info {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.gauge-city {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.gauge-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    max-width: 280px;
+    line-height: 1.5;
+}
+
+.gauge-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.gauge-empty-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
