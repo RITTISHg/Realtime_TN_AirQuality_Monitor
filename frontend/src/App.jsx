@@ -57,7 +57,7 @@ function App() {
         try {
             const [stationRes, allRes] = await Promise.all([
                 fetch(`/api/air-quality?city=${encodeURIComponent(selectedCity)}&state=${encodeURIComponent(state)}&pollutant=${encodeURIComponent(selectedPollutant)}`),
-                fetch(`/api/air-quality/all-pollutants?city=${encodeURIComponent(selectedCity)}&state=${encodeURIComponent(state)}`)
+                fetch(`/api/all-pollutants?city=${encodeURIComponent(selectedCity)}&state=${encodeURIComponent(state)}`)
             ]);
 
             const stationJson = await stationRes.json();

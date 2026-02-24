@@ -7,6 +7,9 @@ frontend/dist/
 
 # Environment variables (contains API keys)
 API.env
+.env
+.env.local
+.env.production
 
 # OS files
 .DS_Store
@@ -19,3 +22,6 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Vercel
+.vercel/

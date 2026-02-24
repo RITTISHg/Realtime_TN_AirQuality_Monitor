@@ -45,7 +45,7 @@ app.get("/api/air-quality", async (req, res) => {
 });
 
 // ─── Endpoint: Get all pollutants for a city ─────────────────────────
-app.get("/api/air-quality/all-pollutants", async (req, res) => {
+app.get("/api/all-pollutants", async (req, res) => {
     const { city = "Chennai", state = "TamilNadu" } = req.query;
     const pollutants = ["PM2.5", "PM10", "NO2", "SO2", "CO", "OZONE", "NH3"];
 
